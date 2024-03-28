@@ -1,7 +1,7 @@
 from cryptography.fernet import Fernet
 
 def load_key():
-    file =  open("Key.key", "rb")
+    file =  open("Beginner/Key.key", "rb")
     key = file.read()
     file.close()
     return key
@@ -19,7 +19,7 @@ write_key()
 '''
 
 def view():
-    with open("passwords.txt", 'r') as f:
+    with open("Beginner/passwords.txt", 'r') as f:
         for line in f.readlines():
             data = line.rstrip() # rstrip removes the "\n" that is created in the add func
             user, passw = data.split("|") # split outputs an array
@@ -29,7 +29,7 @@ def add():
     name = input("Account Name: ")
     pwd = input("Password: ")
     
-    with open("passwords.txt", 'a') as f:
+    with open("Beginner/passwords.txt", 'a') as f:
         f.write(name + "|" + fer.encrypt(pwd.encode()).decode() + "\n")
 
 while True:
