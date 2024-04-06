@@ -1,0 +1,6 @@
+End Goal
+
+- 5 games (Tic, Crossword, Sudoku, Unscramble, Memory)
+- Clean interface
+- Different difficulties
+- Posted
